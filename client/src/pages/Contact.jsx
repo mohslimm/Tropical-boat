@@ -12,7 +12,7 @@ const INFO_CARDS = [
   {
     icon: '✉️',
     label: 'Email Us',
-    value: 'info@steppingstones.com',
+    value: 'info@tropicalboat.com',
     sub: 'We respond within 2 hours',
   },
   {
@@ -92,7 +92,7 @@ const Contact = () => {
       {/* ── Info Cards ───────────────────────────────── */}
       <section style={{ padding: '3.5rem 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+          <div className="grid-3">
             {INFO_CARDS.map(({ icon, label, value, sub }, i) => (
               <motion.div
                 key={label}
@@ -141,10 +141,10 @@ const Contact = () => {
             <motion.form
               onSubmit={handleSubmit(onSubmit)}
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '2.5rem' }}
+              style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 'clamp(1.5rem, 4vw, 2.5rem)' }}
             >
               {/* Row 1: Name + Email */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+              <div className="form-row-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
                 <div className="form-group">
                   <label className="form-label">Full Name *</label>
                   <input className="form-input" placeholder="Your name" {...register('name', { required: 'Required' })} />
@@ -158,7 +158,7 @@ const Contact = () => {
               </div>
 
               {/* Row 2: Phone + Destination */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+              <div className="form-row-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
                 <div className="form-group">
                   <label className="form-label">Phone</label>
                   <input className="form-input" placeholder="+1 305 000 0000" {...register('phone')} />
@@ -197,9 +197,9 @@ const Contact = () => {
       {/* ── Map ──────────────────────────────────────── */}
       <section style={{ padding: '0 0 5rem' }}>
         <div className="container">
-          <div style={{ position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--border-subtle)', height: '460px' }}>
+          <div style={{ position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--border-subtle)', height: 'clamp(280px, 40vw, 460px)' }}>
             <iframe
-              title="Stepping Stones Miami Office"
+              title="Tropical Boat Miami Office"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.0!2d-80.1918!3d25.7742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6823ed15813%3A0xd4d7b3b3e3b3e3b3!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%" height="100%"
               style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg)' }}

@@ -69,7 +69,7 @@ const YachtDetail = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
-              style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}
+              className="hero-specs"
             >
               {[
                 { label: 'Length', value: `${yacht.length} ft` },
@@ -86,9 +86,12 @@ const YachtDetail = () => {
           </div>
         </div>
 
-        {/* Thumbnail strip — floating bottom right */}
+        {/* Thumbnail strip — moves below hero on mobile */}
         {imgs.length > 1 && (
-          <div style={{ position: 'absolute', bottom: '2rem', right: '2rem', display: 'flex', gap: '0.5rem' }}>
+          <div
+            className="thumb-strip"
+            style={{ position: 'absolute', bottom: '2rem', right: '2rem', display: 'flex', gap: '0.5rem' }}
+          >
             {imgs.map((img, i) => (
               <button
                 key={i}
@@ -111,7 +114,7 @@ const YachtDetail = () => {
       </div>
 
       {/* Content */}
-      <div className="container" style={{ padding: '3rem 2rem', display: 'grid', gridTemplateColumns: '1fr 380px', gap: '3rem', alignItems: 'start' }}>
+      <div className="container grid-detail" style={{ padding: 'clamp(2rem, 4vw, 4rem) clamp(1.25rem, 4vw, 2rem)' }}>
         <div>
           <div className="divider" style={{ marginBottom: '2rem' }} />
 
@@ -119,7 +122,7 @@ const YachtDetail = () => {
 
           {/* Specs Grid */}
           <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Specifications</h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', marginBottom: '2rem' }}>
+          <div className="grid-3" style={{ gap: '1.25rem', marginBottom: '2rem' }}>
             {[
               { label: 'Length', value: `${yacht.length} ft` },
               { label: 'Beam', value: yacht.specs?.beam ? `${yacht.specs.beam} ft` : '—' },

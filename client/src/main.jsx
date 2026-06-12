@@ -23,10 +23,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             position="top-right"
             toastOptions={{
               style: {
-                background: '#16161f',
-                color: '#f0ede4',
-                border: '1px solid rgba(197, 179, 89, 0.2)',
-                fontFamily: 'Manrope, sans-serif',
+                background: '#0f0f20',
+                color: '#f0ede8',
+                border: '1px solid rgba(197, 160, 89, 0.25)',
+                fontFamily: "'Outfit', sans-serif",
+                fontWeight: 300,
+                fontSize: '0.875rem',
+                borderRadius: '8px',
               },
             }}
           />

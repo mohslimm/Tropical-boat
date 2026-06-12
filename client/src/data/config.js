@@ -3,7 +3,7 @@ export const USE_MOCK = true;
 
 // ─── Hardcoded admin account (only used when USE_MOCK = true) ─────────────
 export const MOCK_ADMIN = {
-  email: 'admin@prestige.com',
+  email: 'admin@tropicalboat.com',
   password: 'admin123',
   name: 'Admin',
   role: 'admin',

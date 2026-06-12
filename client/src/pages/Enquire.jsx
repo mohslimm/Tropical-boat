@@ -156,7 +156,7 @@ const Enquire = () => {
 
       {/* ── Form + Info ─────────────────────────────── */}
       <section style={{ padding: '4rem 0 6rem' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="container grid-1-2">
 
           {/* Left: Contact Info */}
           <motion.div
@@ -190,7 +190,7 @@ const Enquire = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
-              <InfoCard icon="📧" label="Email" value="enquiries@stepping-stones.com" />
+              <InfoCard icon="📧" label="Email" value="enquiries@tropical-boat.com" />
               <InfoCard icon="📞" label="Phone" value="+1 305 000 0000" />
               <InfoCard icon="📍" label="Office" value="Miami, FL — USA" />
               <InfoCard icon="🕐" label="Response Time" value="Within 24 hours" />
@@ -210,7 +210,7 @@ const Enquire = () => {
             {/* Step 1: Enquiry Type */}
             <div style={{ marginBottom: '2.5rem' }}>
               <StepLabel n="01" label="Type of Enquiry" />
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
+              <div className="grid-2" style={{ gap: '0.75rem' }}>
                 {ENQUIRY_TYPES.map((t) => (
                   <button
                     key={t.id} type="button" onClick={() => setEnquiryType(t.id)}
@@ -239,7 +239,7 @@ const Enquire = () => {
               >
                 <div style={{ height: '1px', background: 'var(--border-subtle)', margin: '0 0 2rem' }} />
                 <StepLabel n="02" label="Charter Preferences" />
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+                <div className="grid-2" style={{ gap: '1.25rem' }}>
                   <div className="form-group">
                     <label className="form-label">Yacht Type</label>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -322,7 +322,7 @@ const Enquire = () => {
               <div style={{ height: '1px', background: 'var(--border-subtle)', margin: '0 0 2rem' }} />
               <StepLabel n={enquiryType !== 'general' ? '03' : '02'} label="Your Details" />
               <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '2rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+                <div className="grid-2" style={{ gap: '1.25rem' }}>
                   <div className="form-group">
                     <label className="form-label">Full Name *</label>
                     <input className="form-input" placeholder="Your full name" {...register('name', { required: 'Name is required' })} />

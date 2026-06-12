@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         setUser(adminUser);
         return adminUser;
       }
-      throw { response: { data: { message: 'Invalid credentials. Use admin@prestige.com / admin123' } } };
+      throw { response: { data: { message: 'Invalid credentials. Use admin@tropicalboat.com / admin123' } } };
     }
 
     // ── Real API login ──────────────────────────────────────────────

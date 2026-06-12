@@ -3,16 +3,16 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 
 const INITIAL = {
-  companyName: 'Stepping Stones Yachts',
+  companyName: 'Tropical Boat',
   tagline: 'The world\'s finest crewed charter yachts',
-  email: 'enquiries@stepping-stones.com',
+  email: 'enquiries@tropical-boat.com',
   phone: '+1 305 000 0000',
   address: '1 Biscayne Tower, Miami, FL 33131, USA',
-  instagram: '@steppingstonesyachts',
-  facebook: 'facebook.com/steppingstones',
-  linkedin: 'linkedin.com/company/stepping-stones',
+  instagram: '@tropical-boat',
+  facebook: 'facebook.com/tropical-boat',
+  linkedin: 'linkedin.com/company/tropical-boat',
   footer: 'The world\'s finest superyachts, curated for the discerning few. Charter your floating masterpiece.',
-  adminEmail: 'admin@stepping-stones.com',
+  adminEmail: 'admin@tropical-boat.com',
   responseTime: '24 hours',
   currency: 'USD',
 };

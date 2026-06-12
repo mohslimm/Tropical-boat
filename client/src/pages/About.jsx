@@ -34,28 +34,32 @@ const About = () => {
 
       {/* Mission */}
       <section className="section">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="container grid-2-article" style={{ gap: 'clamp(2rem, 5vw, 5rem)', alignItems: 'center' }}>
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <span className="section-label">Since 2010</span>
             <h2 style={{ marginBottom: '1.5rem' }}>A Legacy of <span className="gold-gradient">Excellence</span></h2>
             <p style={{ marginBottom: '1rem' }}>
-              Stepping Stones was founded on a simple belief: that booking the world's finest charter yachts should be as effortless as the voyages they offer. Since 2010, we have been the trusted partner for discerning clients worldwide.
+              Tropical Boat was founded on a simple belief: that booking the world's finest charter yachts should be as effortless as the voyages they offer. Since 2010, we have been the trusted partner for discerning clients worldwide.
             </p>
             <p>
               From Monaco to the Maldives, our curated fleet of crewed charter yachts spans the globe's most coveted destinations. Each vessel is personally inspected and vetted by our specialist team.
             </p>
             <div className="divider" style={{ marginTop: '2rem' }} />
-            <div style={{ display: 'flex', gap: '2.5rem', marginTop: '2rem' }}>
+            <div style={{ display: 'flex', gap: '2.5rem', marginTop: '2rem', flexWrap: 'wrap' }}>
               {[['200+', 'Yachts'], ['50+', 'Countries'], ['15', 'Years']].map(([v, l]) => (
                 <div key={l}>
-                  <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2.5rem', color: 'var(--gold)', lineHeight: 1 }}>{v}</p>
-                  <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text-muted)' }}>{l}</p>
+                  <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 2.5rem)', color: 'var(--gold)', lineHeight: 1 }}>{v}</p>
+                  <p style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text-muted)', fontFamily: 'Outfit, sans-serif' }}>{l}</p>
                 </div>
               ))}
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-            <img src="https://images.unsplash.com/photo-1667412319085-144022cc8df6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury yacht" style={{ borderRadius: 'var(--radius-lg)', width: '100%', height: '420px', objectFit: 'cover' }} />
+            <img
+              src="https://images.unsplash.com/photo-1667412319085-144022cc8df6?q=80&w=1170&auto=format&fit=crop"
+              alt="Luxury yacht on the water"
+              style={{ borderRadius: 'var(--radius-lg)', width: '100%', height: 'clamp(280px, 40vw, 420px)', objectFit: 'cover' }}
+            />
           </motion.div>
         </div>
       </section>

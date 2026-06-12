@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/yachts", require("./routes/yachtRoutes"));
 app.use("/api/leads", require("./routes/leadRoutes"));
+app.use("/api/bookings", require("./routes/bookingRoutes"));
 app.use("/api/upload", require("./routes/uploadRoutes"));
 
 app.get("/", (req, res) => {

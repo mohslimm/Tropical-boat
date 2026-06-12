@@ -85,7 +85,7 @@ const LeadsInbox = () => {
                     Mark Replied
                   </button>
                 )}
-                <a href={`mailto:${lead.email}?subject=Re: Your Yacht Enquiry&body=Dear ${lead.name},%0D%0A%0D%0AThank you for your enquiry.%0D%0A%0D%0ABest regards,%0D%0APrestige Yachts Team`} className="btn btn-gold" style={{ fontSize: '0.78rem', padding: '0.5rem 0.9rem', textAlign: 'center' }}>
+                <a href={`mailto:${lead.email}?subject=Re: Your Yacht Enquiry&body=Dear ${lead.name},%0D%0A%0D%0AThank you for your enquiry.%0D%0A%0D%0ABest regards,%0D%0ATropical Boat Team`} className="btn btn-gold" style={{ fontSize: '0.78rem', padding: '0.5rem 0.9rem', textAlign: 'center' }}>
                   Reply
                 </a>
                 <button onClick={() => { if(window.confirm('Delete this lead?')) deleteMutation.mutate(lead._id); }} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '0.78rem', padding: '0.25rem', textAlign: 'center' }}>

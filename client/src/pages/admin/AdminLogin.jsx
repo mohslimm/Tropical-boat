@@ -33,7 +33,7 @@ const AdminLogin = () => {
         style={{ width: '100%', maxWidth: '420px', padding: '2rem' }}
       >
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', color: 'var(--gold)', fontWeight: 600 }}>Prestige Yachts</span>
+          <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', color: 'var(--gold)', fontWeight: 600 }}>Tropical Boat</span>
           <p style={{ fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-muted)', marginTop: '4px' }}>Admin Portal</p>
         </div>
 

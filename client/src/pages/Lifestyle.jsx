@@ -64,12 +64,17 @@ const Lifestyle = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--border-subtle)', marginBottom: '4rem' }}
+            className="grid-2-article"
+            style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--border-subtle)', marginBottom: '4rem' }}
           >
-            <img src={articles[0].image} alt={articles[0].title} style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
-            <div style={{ background: 'var(--bg-card)', padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <img
+              src={articles[0].image}
+              alt={articles[0].title}
+              style={{ width: '100%', height: '400px', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{ background: 'var(--bg-card)', padding: 'clamp(1.5rem, 4vw, 3rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <span className="badge badge-gold" style={{ alignSelf: 'flex-start', marginBottom: '1.25rem' }}>{articles[0].category}</span>
-              <h2 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.8rem' }}>{articles[0].title}</h2>
+              <h2 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: 'clamp(1.3rem, 3vw, 1.8rem)' }}>{articles[0].title}</h2>
               <p style={{ marginBottom: '2rem' }}>{articles[0].description}</p>
               <Link to="/contact" className="btn btn-outline" style={{ alignSelf: 'flex-start' }}>Read More →</Link>
             </div>
